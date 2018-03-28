@@ -31,7 +31,7 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
-    String url = "https://goo.gl/images/VJUoPQ";
+    String url = "https://cdn.pixabay.com/photo/2017/07/11/19/50/free-pictures-2494806_960_720.jpg";
     private ImageView imageView;
 
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setMessage("Caricamento...");
                 dialog.show();
 
-                ImageRequest imageRequest = new ImageRequest("https://cdn.pixabay.com/photo/2017/07/11/19/50/free-pictures-2494806_960_720.jpg", new Response.Listener<Bitmap>() {
+                ImageRequest imageRequest = new ImageRequest(url, new Response.Listener<Bitmap>() {
                     @Override
                     public void onResponse(Bitmap response) {
                         Uri uri = saveImageToInternalStorage(response);
